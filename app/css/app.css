@@ -1,0 +1,11 @@
+html, body {
+    min-height: 100%;
+	min-width:100%;
+	font-family: helvetica,arial,sans-serif;
+	font-size: 13px;
+    line-height: 1.4;
+}
+
+body{
+	background:url(../img/whitepaper-pattern.jpg) repeat;
+}
