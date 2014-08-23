@@ -1,18 +1,22 @@
 <!doctype html>
-<html lang="en" ng-app="shoppingCart">
+<html lang="en" ng-app="myStoreApp">
 <head>
   <meta charset="utf-8">
   <title>Easy Shop Portal</title>
    <!-- <base href="http://www.w3schools.com/images/" target="_blank">-->
   <link rel="stylesheet" href="components/normalize.css/normalize.css">
+    <link rel="stylesheet" href="css/bootstrap.css">
   <link rel="stylesheet" href="css/app.css">
   
   <script src="components/angular/angular.js"></script>
   <script src="components/angular-animate/angular-animate.js"></script>
   <script src="components/angular-resource/angular-resource.js"></script>
   <script src="components/angular-route/angular-route.js"></script>
+  <script src="components/angular-bootstrap/ui-bootstrap.js"></script>
+  <script src="scripts/app.js"></script>
+   <script src="scripts/controllers/controllers.js"></script>
   <!--  <link rel="stylesheet" href="css/animations.css">
-  <script src="js/app.js"></script>
+  
   <script src="js/animations.js"></script>
   <script src="js/controllers.js"></script>
   <script src="js/filters.js"></script>
@@ -30,10 +34,14 @@
 					<a>Track Order</a>
 				</div>
 				<div class="quickSearch" >
-					<input autocomplete="off" placeholder="What's on your mind" id="q" class="searchBox hide">
+					<input autocomplete="off" type="text" placeholder="What's on your mind" id="q" class="searchBox hide">
 					<!--<a class="submit"><img class="icon-search hide" src="img/search.png"></span></a>-->
-					<img class="icon-search hide" src="img/search.png"></span>
+					<a class="submit" stye="min-width:50px;"><img class="icon-search hide" src="img/search.png"></span></a>
 				</div>
+			</div>
+			<div class="banner">
+				<figure class="bannerImage">
+				</figure>
 			</div>
 			<nav class="topNav">
 				<ul class="topNavMenu">
@@ -45,7 +53,7 @@
 			</nav>
 		</header>
 	
-		<div class="view-container">testing
+		<div class="view-container">
 			<div ng-view class="view-frame"></div>
 		</div>
   </div>
