@@ -1,11 +1,135 @@
 html, body {
-    min-height: 100%;
-	min-width:100%;
+    height: 100%;
+	width:100%;
 	font-family: helvetica,arial,sans-serif;
 	font-size: 13px;
-    line-height: 1.4;
+    /*line-height: 1.4;*/
 }
 
 body{
-	background:url(../img/whitepaper-pattern.jpg) repeat;
+	background:url(../img/whitepaper-pattern.jpg) repeat ;
+}
+
+a{
+	text-decoration: none;
+	cursor:pointer;
+	-webkit-transition: all 0.3s ease-out;
+	-o-transition: all 0.3s ease-out;
+	transition: all 0.3s ease-out;
+}
+
+input{
+	height: 30px;
+	padding: 0 8px;
+	box-sizing: border-box;
+	color: #666;
+	font-size: 16px;	
+	border-radius:4px;
+	border:1px solid #ccc;
+}
+
+input:focus{
+	border:1px solid #333;
+}
+.hide{
+	display:none;
+}
+
+.bannerStripe{
+	background:url(../img/gray-pattern.png) repeat;
+	height:60px;
+}
+a.logo{
+	margin-left:5%;
+	margin-top: 3px;
+	display: inline-block;
+	-webkit-transition: all 0.3s ease-out;
+	-o-transition: all 0.3s ease-out;
+	transition: all 0.3s ease-out;
+}
+
+.logo:hover{
+	opacity:.5;
+	letter-spacing: 2px;
+}
+
+.mylogo {
+    color: #ccc;
+    font-size: 45px;
+	letter-spacing: inherit;
+}
+
+.shoplogo {
+    color: #F0A31A;
+    font-size: 46px;
+	letter-spacing: 2px;
+	font-family: monospace;
+}
+
+.quickLinks{
+    float: right;
+	margin-top: 10px;
+    padding: 10px;
+    margin-right: 5%;
+	min-width:340px;
+}
+
+.quickLinks a{
+	font-size: 15px;
+	color: #C9C6C6;
+	padding: 0 0 0 12px;
+	vertical-align: middle; /* To prevent all other links from jumping when i hover any link*/
+	 
+}
+.quickLinks a:after{
+	content: "";
+	border-right: 1px dotted #ccc;
+	margin: 0 0 0 12px;
+}
+.quickLinks a:last-child:after{
+	border:none;
+}
+
+.quickLinks a:hover{
+	font-size: 16px;
+	color:#E7951A;
+}
+
+.quickSearch{
+	float: right;
+	width: 120px;
+	background: url(../img/search.png) no-repeat center center #161616;
+	height: 60px;
+	line-height: 60px; /* to align textbox and search icon in middle*/
+	background-size: 42px;
+	cursor:pointer;
+	box-sizing: border-box;
+	transition: background-color 0.3s ease,
+				width 0.3s ease;
+}
+
+.quickSearch:hover{
+	background-color:#333232;
+	/*width:300px;*/
+	width:30%;
+	background-image:none;
+	padding: 0 10px;
+}
+
+.searchBox{
+	width:50px;
+	/*transition: width 0.3s ease;*/
+}
+
+.quickSearch:hover .icon-search{
+	display: initial;
+}
+.quickSearch:hover .searchBox{
+	width:85%;
+	display: initial;
+}
+
+.icon-search{
+	width:36px;
+	vertical-align: middle;
 }

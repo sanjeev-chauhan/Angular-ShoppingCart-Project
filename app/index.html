@@ -3,7 +3,8 @@
 <head>
   <meta charset="utf-8">
   <title>Easy Shop Portal</title>
-  <link rel="stylesheet" href=" components/normalize-css/normalize.css">
+   <!-- <base href="http://www.w3schools.com/images/" target="_blank">-->
+  <link rel="stylesheet" href="components/normalize.css/normalize.css">
   <link rel="stylesheet" href="css/app.css">
   
   <script src="components/angular/angular.js"></script>
@@ -18,8 +19,35 @@
   <script src="js/services.js"></script>-->
 </head>
 <body>
-  <div class="view-container">
-    <div ng-view class="view-frame"></div>
+	<div class="pageWrapper">
+		<header class="topHeader">
+			<div class="bannerStripe">
+				<a href="index.html" class="logo"><span class="mylogo">My</span> <span class="shoplogo">Shop</span></a>
+				<div class="quickLinks">
+					<a>Register</a>
+					<a>Login</a>
+					<a>Contact</a>
+					<a>Track Order</a>
+				</div>
+				<div class="quickSearch" >
+					<input autocomplete="off" placeholder="What's on your mind" id="q" class="searchBox hide">
+					<!--<a class="submit"><img class="icon-search hide" src="img/search.png"></span></a>-->
+					<img class="icon-search hide" src="img/search.png"></span>
+				</div>
+			</div>
+			<nav class="topNav">
+				<ul class="topNavMenu">
+					<li><a>Men</a></li>
+					<li><a>Women</a></li>
+					<li><a>Kids</a></li>
+					<li><a>Best Deals</a></li>
+				</ul>
+			</nav>
+		</header>
+	
+		<div class="view-container">testing
+			<div ng-view class="view-frame"></div>
+		</div>
   </div>
 </body>
 </html>
