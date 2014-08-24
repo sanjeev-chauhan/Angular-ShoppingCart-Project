@@ -2,13 +2,17 @@
 
 /* Controllers */
 
-var myStoreControllers = angular.module('myStoreControllers', []);
+var myStoreControllers = angular.module('myStoreControllers', ['ui.bootstrap']);
 
-myStoreControllers.controller('homePageCtrl', ['$scope', 
-  function($scope) {
-    //$scope.phones = Phone.query();
-	 $scope.trendingProductsList = 'age';
-    //$scope.orderProp = 'age';
+myStoreControllers.controller('homePageCtrl', ['$scope', '$http',
+  function($scope, $http) {
+	$scope.latestCollection = [];
+	 
+	$http({method: 'GET', url: 'static/json/latest.json'}).
+	success(function(data, status, headers, config) {
+	  $scope.latestCollection = data;
+	})
+		
   }]);
 
 /*phonecatControllers.controller('PhoneDetailCtrl', ['$scope', '$routeParams', 'Phone',

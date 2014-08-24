@@ -6,7 +6,6 @@ var myStoreApp = angular.module('myStoreApp', [
   'ngRoute',
   'ngResource',
   'ngAnimate',
-  'ui.bootstrap',
   'myStoreControllers'
 ]);
 

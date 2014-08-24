@@ -18,11 +18,15 @@ a{
 	transition: all 0.3s ease-out;
 }
 
+a:hover, a:focus {
+	text-decoration: none;
+}
+
 figure, ul{margin:0; padding:0}
 ul, li{list-style: none;}
 
 input[type="text"]{
-	height: 30px;
+	height: 34px;
 	padding: 0 8px;
 	box-sizing: border-box;
 	color: #666;
@@ -30,12 +34,13 @@ input[type="text"]{
 	border-radius:4px;
 	border:1px solid #ccc;
 	outline:none;
+	line-height: normal;
 }
 
 input[type="text"]:focus{
 	border:1px solid #E26A27;
 }
-.hide{
+.hideComponent{
 	display:none;
 }
 
@@ -82,7 +87,7 @@ a.logo{
 	font-size: 14px;
 	color: #B4B3B3;
 	padding: 0 0 0 12px;
-	vertical-align: middle; /* To prevent all other links from jumping when i hover any link*/
+	vertical-align: middle; /* To prevent all other links from jumping vertically when i hover any link*/
 	 
 }
 .quickLinks a:after{
@@ -103,7 +108,7 @@ a.logo{
 	float: right;
 	width: 12%;
 	min-width:192px;
-	background: url(../img/search.png) no-repeat center center #161616;
+	background: url(../img/icons/search.png) no-repeat center center #161616;
 	height: 60px;
 	line-height: 60px; /* to align textbox and search icon in middle*/
 	background-size: 42px;
@@ -123,6 +128,7 @@ a.logo{
 
 .searchBox{
 	width:75%;
+	vertical-align:middle;
 	/*transition: width 0.3s ease;*/
 }
 
@@ -144,12 +150,13 @@ a.logo{
 	height:212px;
 	background-size: cover;
 }
+.topNav{position:relative;min-width:700px;}
 
 .topNavMenu{
 	border-bottom:1px solid #ccc;
 	margin: 0 auto;
 	width: 40%;
-	min-width: 600px;
+	min-width: 550px;
 	text-align: center;
 }
 
@@ -168,4 +175,26 @@ a.logo{
 .topNavMenu >li a:hover {
 	border-bottom: 3px solid #D64C16;
 	padding-bottom: 7px;
+}
+.topNav .actions {
+	position: absolute;
+	top: 5px;
+	right: 11%;
+}
+.topNav .actions a{
+	display: inline-block;
+	width:50px;
+	height:33px;
+}
+
+.topNav .actions a:hover{opacity:.7;}
+
+.topNav .actions .wishlist{
+	background: url('../img/icons/favorite.png') center center no-repeat  transparent;
+	background-size: 33px;
+}
+
+.topNav .actions .cart{
+	background: url('../img/icons/Shopping-Cart-icon.png') no-repeat center center transparent;
+	background-size: 33px;
 }
