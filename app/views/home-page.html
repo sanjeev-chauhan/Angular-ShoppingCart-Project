@@ -1,35 +1,24 @@
-<div class="container">
+<div class="container-fluid">
   <div class="row">
-    <div class="col-md-2">
-      <!--Sidebar content-->
-
+    <!--<div class="col-md-2">
       Search: <input ng-model="query">
       Sort by:
-      <!--<select ng-model="orderProp">
+      <select ng-model="orderProp">
         <option value="name">Alphabetical</option>
         <option value="age">Newest</option>
-      </select>-->
+      </select>
 
+    </div>-->
+    <div class="col-md-8">
+	<h3>Latest Collection </h3>
+		<div class="latestCollectionCarousel">
+			<carousel interval="carouselInterval">
+				  <slide ng-repeat="product in latestCollection" active="slide.active">
+					<a><img ng-src="{{product.imageUrl}}" class="collectionImg"></a>
+				  </slide>
+			</carousel>
+		</div>
     </div>
-    <div class="col-md-10">
-      <!--Body content-->
-
-      <!--<ul class="phones">
-        <li ng-repeat="product in latestCollection | filter:query" class="thumbnail phone-listing">
-          <a href="#/product/{{phone.id}}" class="thumb"><img ng-src="{{product.imageUrl}}"></a>
-        </li>
-      </ul>-->
-	  
-	<carousel>
-		  <slide ng-repeat="product in latestCollection">
-			<img ng-src="{{product.imageUrl}}" style="margin:auto;">
-			<div class="carousel-caption">
-			  <h4>Slide {{$index}}</h4>
-			  <p>{{product.name}}</p>
-			</div>
-		  </slide>
-    </carousel>
-
-    </div>
+	<div class="col-md-2"></div>
   </div>
 </div>

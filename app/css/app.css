@@ -150,10 +150,13 @@ a.logo{
 	height:212px;
 	background-size: cover;
 }
-.topNav{position:relative;min-width:700px;}
+.topNav{
+	position:relative;
+	min-width:700px;
+	border-bottom: 1px solid #ccc;
+}
 
 .topNavMenu{
-	border-bottom:1px solid #ccc;
 	margin: 0 auto;
 	width: 40%;
 	min-width: 550px;
@@ -178,7 +181,7 @@ a.logo{
 }
 .topNav .actions {
 	position: absolute;
-	top: 5px;
+	top: 4px;
 	right: 11%;
 }
 .topNav .actions a{
@@ -197,4 +200,18 @@ a.logo{
 .topNav .actions .cart{
 	background: url('../img/icons/Shopping-Cart-icon.png') no-repeat center center transparent;
 	background-size: 33px;
+}
+
+.view-container{margin-top: 30px;}
+
+.latestCollectionCarousel{
+	width: 600px;
+	height: 450px;
+	background:#ccc;
+	margin:0 auto;
+}
+
+.latestCollectionCarousel .collectionImg{
+	width:100%;
+	height:450px !important;
 }
