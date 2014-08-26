@@ -14,7 +14,7 @@
 		<div class="latestCollectionCarousel">
 			<carousel interval="carouselInterval">
 				  <slide ng-repeat="product in latestCollection" active="slide.active">
-					<a><img ng-src="{{product.imageUrl}}" class="collectionImg"></a>
+					<a href="#/products/latest"><img ng-src="{{product.imageUrl}}" class="collectionImg"></a>
 				  </slide>
 			</carousel>
 		</div>

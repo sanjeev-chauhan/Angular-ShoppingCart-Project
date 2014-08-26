@@ -16,10 +16,10 @@ myStoreApp.config(['$routeProvider',
         templateUrl: 'views/home-page.html',
         controller: 'homePageCtrl'
       }).
-      /*when('/phones/:phoneId', {
-        templateUrl: 'partials/phone-detail.html',
-        controller: 'PhoneDetailCtrl'
-      }).*/
+      when('/products/:category', {
+        templateUrl: 'views/products-list.html',
+        controller: 'homePageCtrl'
+      }).
       otherwise({
         redirectTo: 'home'
       });

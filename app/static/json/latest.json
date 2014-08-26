@@ -1,0 +1,27 @@
+[
+    {
+        "brand": "Roadster",
+        "imageUrl": "img/fashion/web/Roadster_HPB.jpg",
+        "name": "Roadster_HPB"
+    },
+    {
+        "brand": "Indian Terrrain",
+        "imageUrl": "img/fashion/web/Indian-Terrain_HPB.jpg",
+        "name": "Indian-Terrain_HPB"
+    },
+    {
+        "brand": "Gucci",
+        "imageUrl": "img/fashion/web/Gucci-Fashion-017.jpg",
+        "name": "Gucci-Fashion"
+    },
+    {
+        "brand": "Dolce Gabbana",
+        "imageUrl": "img/fashion/web/D-G-431482.jpg",
+        "name": "Dolce Gabbana"
+    },
+    {
+        "brand": "Guess",
+        "imageUrl": "img/fashion/web/Guess-Jeans.jpg",
+        "name": "Guess-Jeans"
+    }
+]
