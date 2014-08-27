@@ -1,4 +1,19 @@
-<div class="phone-images">
+
+<div class="productsListContainer">
+Number of items - {{(productsList | filter: query).length}}
+	<ul class="productsList">
+		<li ng-repeat="product in filteredList = (productsList | filter: query)">
+			<a><img ng-src="{{product.imageUrl}}" ng-click="setImage(product.imageUrl)" class="productMainImage"></a>
+			
+				<div class="productBrandName">{{product.brand }}</div>
+				<div class="productName">{{product.name }}</div>
+				<div class="productPrice">Rs. {{product.discountedPrice }}</div>
+			
+		</li>
+	</ul>
+</div>
+
+<!--<div class="phone-images">
   <img ng-src="{{img}}"
        class="phone"
        ng-repeat="img in phone.images"
@@ -115,4 +130,4 @@
     <span>Additional Features</span>
     <dd>{{phone.additionalFeatures}}</dd>
   </li>
-</ul>
+</ul>-->

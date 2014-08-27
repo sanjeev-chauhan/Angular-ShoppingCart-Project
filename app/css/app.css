@@ -215,3 +215,18 @@ a.logo{
 	width:100%;
 	height:450px !important;
 }
+
+ul.productsList > li{
+	display: inline-block;
+	background: white;
+	margin-right: 15px;
+	border:1px solid #EBE9E9;
+}
+ul.productsList > li:hover{border-color:#ccc;}
+ul.productsList img.productMainImage{
+	width: 300px;
+}
+
+.productBrandName{font-weight:bold;text-align:center;border-top:1px solid #EBE9E9;}
+.productName{text-align:center}
+.productPrice{font-weight:bold;text-align:center}

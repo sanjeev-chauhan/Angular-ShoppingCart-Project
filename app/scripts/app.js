@@ -18,7 +18,7 @@ myStoreApp.config(['$routeProvider',
       }).
       when('/products/:category', {
         templateUrl: 'views/products-list.html',
-        controller: 'homePageCtrl'
+        controller: 'productsListCtrl'
       }).
       otherwise({
         redirectTo: 'home'
