@@ -40,9 +40,15 @@ input[type="text"]{
 input[type="text"]:focus{
 	border:1px solid #E26A27;
 }
+
+input[type="checkbox"]{margin-right:5px;}
+
 .hideComponent{
 	display:none;
 }
+.subHeader{font-size:15px;font-weight:600;}
+
+.inputLabel{font-size:12px;}
 
 .bannerStripe{
 	background:url(../img/gray-pattern.png) repeat;
@@ -137,7 +143,6 @@ a.logo{
 	vertical-align: middle;
 }
 
-
 .quickSearch:hover .icon-search{
 	display: initial;
 }
@@ -222,11 +227,18 @@ ul.productsList > li{
 	margin-right: 15px;
 	border:1px solid #EBE9E9;
 }
+
 ul.productsList > li:hover{border-color:#ccc;}
+
 ul.productsList img.productMainImage{
 	width: 300px;
 }
 
-.productBrandName{font-weight:bold;text-align:center;border-top:1px solid #EBE9E9;}
+.productBrandName{
+	font-weight:bold;
+	text-align:center;
+	border-top:1px solid #EBE9E9;
+}
+
 .productName{text-align:center}
 .productPrice{font-weight:bold;text-align:center}

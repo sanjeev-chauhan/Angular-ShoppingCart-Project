@@ -1,17 +1,43 @@
-
-<div class="productsListContainer">
-Number of items - {{(productsList | filter: query).length}}
-	<ul class="productsList">
-		<li ng-repeat="product in filteredList = (productsList | filter: query)">
-			<a><img ng-src="{{product.imageUrl}}" ng-click="setImage(product.imageUrl)" class="productMainImage"></a>
-			
-				<div class="productBrandName">{{product.brand }}</div>
-				<div class="productName">{{product.name }}</div>
-				<div class="productPrice">Rs. {{product.discountedPrice }}</div>
-			
-		</li>
-	</ul>
+<div class="container-fluid">
+	<div class="row">
+		<div class="col-md-2">
+			<h4>Apply Filter:</h4>
+			<div class="productsFilter">
+				<ul>
+					<li><label class="inputLabel"><input type="checkbox" name="gender" />Men</label></li>
+					<li><label class="inputLabel"><input type="checkbox" name="gender" />Women</label></li>
+				</ul>
+				<ul class="categories filterSection expanded">
+					<h4 class="subHeader">Categories:</h4>
+					<li ng-repeat="category in filterCategories">
+						<label class="inputLabel"><input type="checkbox" name="categories" />{{category}}</label>
+					</li>
+				</ul>
+				<ul class="brand filterSection expanded">
+					<h4 class="subHeader">Brand:</h4>
+					<li ng-repeat="brand in filterBrand">
+						<label class="inputLabel"><input type="checkbox" name="brand" />{{brand}}</label>
+					</li>
+				</ul>
+			</div>
+		</div>
+		
+		 <div class="col-md-10">
+			<div class="productsListContainer">
+				<h4 class="subHeader">Number of products - {{(productsList | filter: query).length}} items</h4>
+				<ul class="productsList">
+					<li ng-repeat="product in filteredList = (productsList | filter: query)">
+						<a><img ng-src="{{product.imageUrl}}" ng-click="setImage(product.imageUrl)" class="productMainImage"></a>
+						<div class="productBrandName">{{product.brand }}</div>
+						<div class="productName">{{product.name }}</div>
+						<div class="productPrice">Rs. {{product.discountedPrice }}</div>
+					</li>
+				</ul>
+			</div>
+		 </div>
+	</div>
 </div>
+
 
 <!--<div class="phone-images">
   <img ng-src="{{img}}"
