@@ -30,10 +30,20 @@ myStoreControllersModule.controller('productsListCtrl', ['$scope', '$http','$roo
 	success(function(data, status, headers, config) {
 		$scope.productsList = data;
 	})
-	$scope.category ={};
-	$scope.filterCategories = [{dataBindingKey:"category.Shirts", value:"Shirts"} , {dataBindingKey:"category.Tshirts", value:"Tshirts"} , 
-		{dataBindingKey:"category.Trousers", value:"Trousers"} ,{dataBindingKey:"category.Jeans", value:"Jeans"} , {dataBindingKey:"category.Shoes", value:"Shoes"}];
-	$scope.filterBrand = ["Even" ,"Kook N Keech Marvel" ,"Breakbounce" , "White Kalia"];
+	$scope.category = {};
+	$scope.brand = {};
+	
+	//Function to set checkbox model property true or false in its parent obj when it is checked/unchecked
+	$scope.setFilterBindingProp = function(itemObject){
+		$scope[itemObject.dataBindingKey][itemObject.value] = event.target.checked;
+	}
+	
+	$scope.filterCategories = [{dataBindingKey:"category", value:"Shirts"} , {dataBindingKey:"category", value:"Tshirts"} , 
+		{dataBindingKey:"category", value:"Trousers"} ,{dataBindingKey:"category", value:"Jeans"} , {dataBindingKey:"category", value:"Shoes"}];
+		
+	$scope.filterBrand = [{dataBindingKey:"brand", value:"Even"} , {dataBindingKey:"brand", value:"Kook N Keech Marvel"} , 
+		{dataBindingKey:"brand", value:"Breakbounce"}, {dataBindingKey:"brand", value:"White Kalia"}];
+	
 	$scope.setImage = function(imageUrl) {
 		$scope.mainImageUrl = imageUrl;
     }

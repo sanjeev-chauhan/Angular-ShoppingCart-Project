@@ -4,21 +4,21 @@
 
 var myStoreFiltersModule = angular.module('myStoreFilters', []);
 
-myStoreFiltersModule.filter('genderFilter', function() {
-	return function (productsList, gender , propertyToMatch) {
+myStoreFiltersModule.filter('productFilter', function() {
+	return function (productsList, bindingObj , propertyToMatch) {
 		var self = this, filteredList = [] , anyfilterSet = false ;
 		self.objPropToMatch = propertyToMatch; //The object property to be used for filter match
-		//If gender is defined, then check if any filter has been set
-		if(gender){
-			for(var i in gender){
-				if(gender[i]){
+		//If bindingObj is defined, then check if any filter has been set
+		if(bindingObj){
+			for(var i in bindingObj){
+				if(bindingObj[i]){
 					anyfilterSet = true;
 				}
 			}
 		}
 		if(anyfilterSet){
 			angular.forEach(productsList, function (value, key) {
-				if (gender[value[self.objPropToMatch]] === true) {
+				if (bindingObj[value[self.objPropToMatch]] === true) {
 					filteredList.push(value);
 				}
 			}, self)
