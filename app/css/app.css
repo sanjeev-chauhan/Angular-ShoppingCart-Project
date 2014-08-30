@@ -227,6 +227,7 @@ ul.productsList > li{
 	margin: 15px 15px 0 0;
 	border:1px solid #EBE9E9;
 	width:250px;
+	vertical-align: top;
 }
 
 ul.productsList > li:hover{border-color:#DFA861;}
@@ -245,5 +246,7 @@ ul.productsList img.productMainImage{
 .productName{text-align:center}
 
 .productPrice{font-weight:bold;text-align:center}
+
+.filterContainer{padding: 0px 30px;}
 
 ul.filterSection {border-top: 1px solid #BBBBBB;}
