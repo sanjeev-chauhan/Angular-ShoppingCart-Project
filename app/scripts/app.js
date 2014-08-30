@@ -3,10 +3,11 @@
 /* App Module */
 
 var myStoreApp = angular.module('myStoreApp', [
-  'ngRoute',
-  'ngResource',
-  'ngAnimate',
-  'myStoreControllers'
+	'ngRoute',
+	'ngResource',
+	'ngAnimate',
+	'myStoreControllers',
+	'myStoreFilters'
 ]);
 
 myStoreApp.config(['$routeProvider',

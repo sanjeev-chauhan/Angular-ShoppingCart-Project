@@ -9,7 +9,7 @@
 		"sizeAvailable":["S", "M", "L", "XL"],
 		"colorsAvailable": ["red" , "green", "brown"],
 		"gender" : "men",
-		"category":"jacket",
+		"category":"Jacket",
         "productId": "even-jacket-1234", 
         "imageUrl": "img/products-list/even-Men-Jackets_372a2309a620ca71fab5d954436e1d36_images_mini.jpg", 
         "name": "Even Men Black Nehru Jacket"
@@ -24,7 +24,7 @@
 		"sizeAvailable":["S", "M", "L"],
 		"colorsAvailable": ["red" ,"brown", "blue"],
 		"gender" : "men",
-		"category":"tshirt",
+		"category":"Tshirts",
         "productId": "Kook-tshirt-1251", 
         "imageUrl": "img/products-list/Kook-N-Keech-Marvel-Men-Blue---Yellow-X-Men-Print-T-shirt_377f52d9d7436f8c314c1c93a7482d1c_images_mini.jpg", 
         "name": "Kook N Keech Marvel Print T-shirt"
@@ -39,7 +39,7 @@
 		"sizeAvailable":["M", "L"],
 		"colorsAvailable": ["red" ,"bronze", "blue"],
 		"gender" : "men",
-		"category":"trouser",
+		"category":"Trousers",
         "productId": "Breakbounce-trouser-1284", 
         "imageUrl": "img/products-list/Breakbounce-Men-Coral-Suave-Slim-Fit-Chino-Trousers_78a4c18163c7828ff98672895a75617d_images_mini.jpg", 
         "name": "Breakbounce-Men-Coral Chino-Trousers"
@@ -54,7 +54,7 @@
 		"sizeAvailable":["M", "L" , "XL"],
 		"colorsAvailable": ["red" ,"bronze", "blue"],
 		"gender" : "men",
-		"category":"trouser",
+		"category":"Trousers",
         "productId": "White-Kalia-trouser-12754", 
         "imageUrl": "img/products-list/White-Kalia-Men-Trousers_39eed59499527b23f3fc8228d139ef03_images_mini.jpg", 
         "name": "White Kalia Men Brown Trousers"

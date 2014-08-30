@@ -224,7 +224,7 @@ a.logo{
 ul.productsList > li{
 	display: inline-block;
 	background: white;
-	margin-right: 15px;
+	margin: 15px 15px 0 0;
 	border:1px solid #EBE9E9;
 }
 

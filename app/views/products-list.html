@@ -4,13 +4,13 @@
 			<h4>Apply Filter:</h4>
 			<div class="productsFilter">
 				<ul>
-					<li><label class="inputLabel"><input type="checkbox" name="gender" />Men</label></li>
-					<li><label class="inputLabel"><input type="checkbox" name="gender" />Women</label></li>
+					<li><label class="inputLabel"><input type="checkbox" name="gender"  ng-model="gender.men" />Men</label></li>
+					<li><label class="inputLabel"><input type="checkbox" name="gender"  ng-model="gender.women" />Women</label></li>
 				</ul>
 				<ul class="categories filterSection expanded">
 					<h4 class="subHeader">Categories:</h4>
 					<li ng-repeat="category in filterCategories">
-						<label class="inputLabel"><input type="checkbox" name="categories" />{{category}}</label>
+						<label class="inputLabel"><input type="checkbox" name="categories"  ng-model="category.dataBindingKey"/>{{category.value}}</label>
 					</li>
 				</ul>
 				<ul class="brand filterSection expanded">
@@ -26,7 +26,7 @@
 			<div class="productsListContainer">
 				<h4 class="subHeader">Number of products - {{(productsList | filter: query).length}} items</h4>
 				<ul class="productsList">
-					<li ng-repeat="product in filteredList = (productsList | filter: query)">
+					<li ng-repeat="product in filteredList = (productsList | genderFilter:gender:'gender' | genderFilter:category:'category' )">
 						<a><img ng-src="{{product.imageUrl}}" ng-click="setImage(product.imageUrl)" class="productMainImage"></a>
 						<div class="productBrandName">{{product.brand }}</div>
 						<div class="productName">{{product.name }}</div>
