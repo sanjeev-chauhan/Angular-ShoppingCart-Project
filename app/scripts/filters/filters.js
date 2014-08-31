@@ -1,7 +1,6 @@
 'use strict';
 
-/* Filters */
-
+/* My Store app Filters */
 var myStoreFiltersModule = angular.module('myStoreFilters', []);
 
 myStoreFiltersModule.filter('productFilter', function() {

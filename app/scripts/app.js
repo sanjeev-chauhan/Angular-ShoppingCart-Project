@@ -1,15 +1,16 @@
 'use strict';
 
 /* App Module */
-
 var myStoreApp = angular.module('myStoreApp', [
 	'ngRoute',
 	'ngResource',
 	'ngAnimate',
 	'myStoreControllers',
-	'myStoreFilters'
+	'myStoreFilters',
+	'myStoreServices'
 ]);
 
+//My Store app Routing for showing different views
 myStoreApp.config(['$routeProvider',
   function($routeProvider) {
     $routeProvider.
@@ -21,7 +22,11 @@ myStoreApp.config(['$routeProvider',
         templateUrl: 'views/products-list.html',
         controller: 'productsListCtrl'
       }).
-      otherwise({
+	 when('/product/detail/:productID', {
+        templateUrl: 'views/product-detail.html',
+        controller: 'productDetailCtrl'
+      }).
+	   otherwise({
         redirectTo: 'home'
       });
   }]);

@@ -1,14 +1,9 @@
 'use strict';
 
-/* Controllers */
-
+/* My Store app Controllers */
 var myStoreControllersModule = angular.module('myStoreControllers', ['ui.bootstrap', 'ngAnimate']);
 
-/*myStoreControllers.controller('headerCtrl', ['$scope','$animate','$rootScope',
-  function($scope, $animate, $rootScope) {
-	$rootScope.showBanner = true;
-}]);*/
-
+//Home page controller
 myStoreControllersModule.controller('homePageCtrl', ['$scope', '$http','$animate','$rootScope',
   function($scope, $http, $animate,$rootScope) {
 	$scope.latestCollection = [];
@@ -22,18 +17,21 @@ myStoreControllersModule.controller('homePageCtrl', ['$scope', '$http','$animate
 	})
 }]);
 
-myStoreControllersModule.controller('productsListCtrl', ['$scope', '$http','$rootScope',
-  function($scope, $http, $rootScope) {
+//Products List page controller
+myStoreControllersModule.controller('productsListCtrl', ['$scope', '$http','$rootScope','Products',
+	function($scope, $http, $rootScope,Products) {
 	$rootScope.showBanner = false;//Hide the banner image
-	//Fetch products list json to populate results
-	$http({method: 'GET', url: 'static/json/products-list.json'}).
+	$scope.category = {}, $scope.brand = {};
+	/*$http({method: 'GET', url: 'static/json/products-list.json'}).
 	success(function(data, status, headers, config) {
 		$scope.productsList = data;
-	})
-	$scope.category = {};
-	$scope.brand = {};
+	})*/
+	//Fetch products list from Products Service to populate results
+	Products.getProductsList().success(function(data, status, headers, config) {
+		$scope.productsList = data;
+	});
 	
-	//Function to set checkbox model property true or false in its parent obj when it is checked/unchecked
+	//Function to set checkbox model property true or false in its parent obj when it is checked/unchecked, used for filtering
 	$scope.setFilterBindingProp = function(event,itemObject){
 		$scope[itemObject.dataBindingKey][itemObject.value] = event.target.checked;
 	}
@@ -42,9 +40,35 @@ myStoreControllersModule.controller('productsListCtrl', ['$scope', '$http','$roo
 		{dataBindingKey:"category", value:"Trousers"} ,{dataBindingKey:"category", value:"Jeans"} , {dataBindingKey:"category", value:"Shoes"}];
 		
 	$scope.filterBrand = [{dataBindingKey:"brand", value:"Even"} , {dataBindingKey:"brand", value:"Puma"} , 
-		{dataBindingKey:"brand", value:"Breakbounce"}, {dataBindingKey:"brand", value:"Indian Terrain"}];
+		{dataBindingKey:"brand", value:"Breakbounce"}, {dataBindingKey:"brand", value:"Indian Terrain"},{dataBindingKey:"brand", value:"Mast & Harbour"}];
 	
-	$scope.setImage = function(imageUrl) {
-		$scope.mainImageUrl = imageUrl;
+	//Set active product in rootScope, to be used for showing product details
+	$scope.setActiveProduct = function(productObj) {
+		$rootScope.activeProduct = productObj;
     }
+}]);
+
+//Product Detail page controller
+myStoreControllersModule.controller('productDetailCtrl', ['$scope','$http','$routeParams','$rootScope','Products',
+  function($scope,$http,$routeParams,$rootScope,Products) {
+	$scope.activeProduct =  $rootScope.activeProduct;//Store active product model object from Root Scope
+	
+	//If active product not set then fetch products list from Products Service and set active product after matching productId from URL
+	if(!$scope.activeProduct){
+	Products.getProductsList().success(function(data, status, headers, config) {
+		for(var i in data){
+			if($routeParams.productID === data[i].productId){
+				$scope.activeProduct = data[i];
+			}
+		}
+	});
+		/*$http({method: 'GET', url: 'static/json/products-list.json'}).
+		success(function(data, status, headers, config) {
+			for(var i in data){
+				if($routeParams.productID === data[i].productId){
+					$scope.activeProduct = data[i];
+				}
+			}
+		})*/
+	}
 }]);
