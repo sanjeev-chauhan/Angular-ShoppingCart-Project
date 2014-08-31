@@ -4,6 +4,10 @@
 			<h4>{{activeProduct.productSummary}}</h4>
 			<div class="productImages">
 				<div class="thumbnails-container">
+					<img ng-repeat="image in activeProduct.imagesCollection" ng-src="{{image}}" ng-click="setActiveImage(image)" class="productThumnail">
+				</div>
+				<div class="activeThumnailImage">
+					<img ng-src="{{activeThumbnail}}"  class="productActiveImage">
 				</div>
 			</div>
 		</div>

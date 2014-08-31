@@ -12,6 +12,7 @@
 		"category":"Jacket",
         "productId": "even-jacket-1234", 
         "imageUrl": "img/products-list/even-Men-Jackets_372a2309a620ca71fab5d954436e1d36_images_mini.jpg", 
+		"imagesCollection": ["img/products-list/even-Men-Jackets_372a2309a620ca71fab5d954436e1d36_images_mini.jpg", "img/products-list/even-Men-Jackets_44281dcb0c5da41c1c95a7fb546a7779_images_mini.jpg"],
         "name": "Even Men Black Nehru Jacket"
     }, 
       {

@@ -254,3 +254,14 @@ ul.productsList img.productMainImage{
 .filterContainer{padding: 0px 30px;}
 
 ul.filterSection {border-top: 1px solid #BBBBBB;}
+
+
+.thumbnails-container {
+display: inline-block;
+width: 70px;
+}
+
+.thumbnails-container img {
+	width:70px;
+	height:auto;
+}
