@@ -50,19 +50,25 @@ myStoreControllersModule.controller('productsListCtrl', ['$scope', '$http','$roo
 //Product Detail page controller
 myStoreControllersModule.controller('productDetailCtrl', ['$scope','$http','$routeParams','$rootScope','Products',
 	function($scope,$http,$routeParams,$rootScope,Products) {
+		if($scope.activeProduct){
 		$scope.activeProduct =  $rootScope.activeProduct;//Store active product model object from Root Scope
-		
-		//If active product not set then fetch products list from Products Service and set active product after matching productId from URL
-		if(!$scope.activeProduct){
+		$scope.activeThumbnail = $scope.activeProduct.imageUrl;
+		}
+		else{
 			Products.getProductsList().success(function(data, status, headers, config) {
 				for(var i in data){
 					if($routeParams.productID === data[i].productId){
 						$scope.activeProduct = data[i];
-						$scope.activeThumbnail = data[i].imageUrl;
+						$scope.activeThumbnail = $scope.activeProduct.imageUrl;
 					}
 				}
 			});
 		}
+		
+		//If active product not set then fetch products list from Products Service and set active product after matching productId from URL
+		/*if(!$scope.activeProduct){
+		
+		}*/
 		
 		$scope.setActiveImage = function(imageUrl){
 			$scope.activeThumbnail = imageUrl;

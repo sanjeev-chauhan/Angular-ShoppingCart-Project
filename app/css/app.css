@@ -255,13 +255,37 @@ ul.productsList img.productMainImage{
 
 ul.filterSection {border-top: 1px solid #BBBBBB;}
 
-
-.thumbnails-container {
-display: inline-block;
-width: 70px;
+.productHeader{color: #444;text-align:center;}
+/*.productDetailOuterContainer{text-align:center;}*/
+.productImagesContainer{
+	width:400px;
+	padding-top: 20px;
+	border: 1px dotted #ccc;
+	text-align:center;
+	display: inline-block;
 }
 
+.thumbnails-container {
+	/*display: inline-block;*/
+}
+.activeThumnailImage img{max-width:100%;}
+
 .thumbnails-container img {
-	width:70px;
+	width:80px;
 	height:auto;
+	display: inline-block;
+	margin-top:	5px;
+	
+}
+
+.productInfoContainer{display: inline-block;vertical-align: top;padding: 20px;}
+
+.productCode{font-size: 15px;color: #333;}
+
+.productValue{
+color: #202020;
+font-size: 18px;
+font-weight: bold;
+margin-top: 20px;
+
 }
