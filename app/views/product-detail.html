@@ -1,21 +1,47 @@
 <div class="container-fluid">
 	<div class="row">
-		<div class="col-sm-10 productDetailOuterContainer" >
+		<div class="col-sm-10">
+		
 			<h3 class="productHeader">{{activeProduct.productSummary}}</h3>
-			<div class="productImagesContainer">
-				<div class="activeThumnailImage">
-					<img ng-src="{{activeThumbnail}}"  class="productActiveImage">
+			<div class="productDetailOuterContainer">
+				<div class="productImagesContainer">
+					<div class="activeThumnailImage">
+						<img ng-src="{{activeThumbnail}}" class="productActiveImage">
+					</div>
+					<div class="thumbnails-container">
+						<img ng-repeat="image in activeProduct.imagesCollection" ng-src="{{image}}" ng-mouseover="setActiveImage(image)" 
+							ng-class="{active: activeThumbnail==image}" class="productThumnail">
+					</div>
 				</div>
-				<div class="thumbnails-container">
-					<img ng-repeat="image in activeProduct.imagesCollection" ng-src="{{image}}" ng-mouseover="setActiveImage(image)" class="productThumnail">
+				<div class="productInfoContainer">
+					<div class="productCode">Product Code:  {{activeProduct.productId}}</div>
+					<div class="productValue" ng-class="{strikeThrough: activeProduct.discount !='0%'}">Rs. {{activeProduct.originalPrice| number}}</div>
+					<div class="productDicount" ng-hide="activeProduct.discount =='0%'">
+						Special Offer - <span class="discountPerct">{{activeProduct.discount}} Off </span> 
+						<span class="ValidTillDate">(Applicable till 15th Sep) </span>
+					</div>
+					<div class="productDicount" ng-show="activeProduct.discount =='0%'">Sorry no discount on this product</div>
+					<div class="productValue discountedPrice">Rs.  {{activeProduct.discountedPrice| number}} <span>(Checkout Price)</span></div> 
+					<div class="availableSizes"> 
+						<span class="productInfoLabel">Choose size: </span>
+						<span ng-repeat="size in activeProduct.sizeAvailable" ng-class="{active:activeSize == size}" class="sizeBox" ng-click="setActiveSize(size)"> {{size }}</span>
+					</div>
+					<div class="availableColors" ng-hide="activeProduct.colorsAvailable == 0"> 
+						<span class="productInfoLabel">Choose color: </span>
+						<span ng-repeat="color in activeProduct.colorsAvailable" ng-class="{active:activeColor == color}" class="colorBox" ng-style="{'background':{{color}}}" ng-click="setActiveColor(color)"> </span>
+					</div>
+					<div class="purchaseButtonContainer"><button type="button" class="button copper">Checkout Now</a></div>
+					
+					<div class="deliveryInfoOptions">
+						
+							<span>30 day Exchange Policy</span>
+							<span>Cash on Delivery</span> 						
+							<span> Free Delivery in NCR*</span>
+					
+					</div>
 				</div>
-			</div>
-			<div class="productInfoContainer">
-			<div class="productCode">Product Code:  {{activeProduct.productId}}</div>
-			<div class="productValue">Rs.  {{activeProduct.originalPrice| number}}</div>
-			<div class="productDicount" ng-hide="activeProduct.discount =='0%'">Our Offer - {{activeProduct.discount}}</div>
-			<div class="productDicount" ng-show="activeProduct.discount =='0%'">Sorry no discount on this product</div>
-			<div>
+				
+				
 		</div>
 		<div class="col-sm-2">
 		</div>
