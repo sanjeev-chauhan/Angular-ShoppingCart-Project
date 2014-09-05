@@ -7,7 +7,7 @@ var myStoreControllersModule = angular.module('myStoreControllers', ['ui.bootstr
 myStoreControllersModule.controller('homePageCtrl', ['$scope', '$http','$animate','$rootScope',
 	function($scope, $http, $animate,$rootScope) {
 		$scope.latestCollection = [];
-		$scope.carouselInterval = 3000;
+		$scope.carouselInterval = appConfig.carouselSlideDuration;
 		$rootScope.showBanner = true;
 		$scope.showBanner = true;
 		$animate.enabled(false,angular.element(document.getElementsByClassName("latestCollectionCarousel")));//Disabling angular animation on carousel as it causes isses with sliding

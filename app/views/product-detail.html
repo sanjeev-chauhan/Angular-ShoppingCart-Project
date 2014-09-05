@@ -1,7 +1,6 @@
 <div class="container-fluid">
 	<div class="row">
-		<div class="col-sm-10">
-		
+		<div class="col-sm-12">
 			<h3 class="productHeader">{{activeProduct.productSummary}}</h3>
 			<div class="productDetailOuterContainer">
 				<div class="productImagesContainer">
@@ -30,7 +29,7 @@
 						<span class="productInfoLabel">Choose color: </span>
 						<span ng-repeat="color in activeProduct.colorsAvailable" ng-class="{active:activeColor == color}" class="colorBox" ng-style="{'background':{{color}}}" ng-click="setActiveColor(color)"> </span>
 					</div>
-					<div class="purchaseButtonContainer"><button type="button" class="button copper">Checkout Now</a></div>
+					<div class="purchaseButtonContainer"><button type="button" class="button copper checkoutButton">Checkout Now</a></div>
 					
 					<div class="deliveryInfoOptions">
 						
@@ -40,10 +39,6 @@
 					
 					</div>
 				</div>
-				
-				
-		</div>
-		<div class="col-sm-2">
 		</div>
 	</div>
 </div>
