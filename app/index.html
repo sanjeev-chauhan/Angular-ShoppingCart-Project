@@ -9,7 +9,7 @@
 </head>
 <body>
 	<div class="pageWrapper">
-		<header class="topHeader">
+		<header class="topHeader" ng-controller="headerCtrl">
 			<div class="bannerStripe">
 				<a href="index.html" class="logo"><span class="mylogo">My</span> <span class="shoplogo">Shop</span></a>
 				<div class="quickLinks">
@@ -18,9 +18,13 @@
 					<a>Contact</a>
 					<a>Track Order</a>
 				</div>
-				<div class="quickSearch" >
-					<input autocomplete="off" type="text" placeholder="What's on your mind" id="q" class="searchBox hideComponent">
-					<a class="submit"><img class="icon-search hideComponent" src="img/icons/search.png"></span></a>
+				<div class="quickSearch" ng-class="{active:showSearchBox}" ng-click="toggleSearchBox($event,true)" style="position:relative">
+					<input autocomplete="off" type="text" placeholder="What's on your mind" id="q" class="searchBox hideComponent" 
+						ng-model="searchValue" typeahead-min-length="3" typeahead="result for result in productSearchResults | filter:$viewValue | limitTo:8" >
+					<a class="submit" title="Click to search" ng-href="#/products/{{searchValue}}">
+						<img class="icon-search hideComponent" src="img/icons/search.png"></img>
+					</a>
+					<img class="close-search hideComponent" src="img/icons/close-window-32.png" title="Close search panel" ng-click="toggleSearchBox($event,false)"></img>
 				</div>
 			</div>
 			<div class="banner" ng-show="$root.showBanner">
@@ -45,6 +49,21 @@
 		</div>
 		
 		<span id="scrollTopControl" title="Scroll to Top" class="ng-hide" ></span>
+		<footer>
+			<div class="container-fluid footer-cnt">
+				  <div class="row footerRow">
+					    <div class="col-md-4">
+							<div class="largerText">Free 30 day Exchange Policy</div>
+						</div>
+						<div class="col-md-4">
+							<div class="largerText" >Cash on Delivery Available</div>
+						</div>
+						<div class="col-md-4">
+							<div class="largerText">Free Delivery in NCR </div>
+						</div>
+				  </div>
+			</div>
+		</footer>
   </div>
   <script src="scripts/config.js"></script>
   <script src="components/angular/angular.js"></script>

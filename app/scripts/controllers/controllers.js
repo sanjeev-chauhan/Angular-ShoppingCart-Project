@@ -3,13 +3,26 @@
 /* My Store app Controllers */
 var myStoreControllersModule = angular.module('myStoreControllers', ['ui.bootstrap', 'ngAnimate']);
 
+//Top header controller
+myStoreControllersModule.controller('headerCtrl', ['$scope', '$http','$animate','$rootScope',
+	function($scope, $http, $animate,$rootScope) {
+		$scope.showSearchBox = false;
+		$scope.toggleSearchBox = function(event, show){
+			$scope.showSearchBox = show;
+			event.stopPropagation();
+		}
+		$rootScope.showBanner = true;
+		$scope.productSearchResults = ["Men", "Women", "Kid", "Shoes", "Shirt", "Tshirt", "Jeans" ,"Dresses", "Kurta","Trousers" ,"Puma","Nike",
+		"Adidas", "Levi", "Indian Terrain"]
+	}
+]);
+
 //Home page controller
 myStoreControllersModule.controller('homePageCtrl', ['$scope', '$http','$animate','$rootScope',
 	function($scope, $http, $animate,$rootScope) {
-		$scope.latestCollection = [];
-		$scope.carouselInterval = appConfig.carouselSlideDuration;
 		$rootScope.showBanner = true;
-		$scope.showBanner = true;
+		$scope.latestCollection = [] ;
+		$scope.carouselInterval = appConfig.carouselSlideDuration;
 		
 		//Disabling angular animation on carousel as it causes isses with sliding
 		$animate.enabled(false,angular.element(document.getElementsByClassName("latestCollectionCarousel")));
