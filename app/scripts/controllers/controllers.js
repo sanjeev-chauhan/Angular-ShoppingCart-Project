@@ -10,7 +10,10 @@ myStoreControllersModule.controller('homePageCtrl', ['$scope', '$http','$animate
 		$scope.carouselInterval = appConfig.carouselSlideDuration;
 		$rootScope.showBanner = true;
 		$scope.showBanner = true;
-		$animate.enabled(false,angular.element(document.getElementsByClassName("latestCollectionCarousel")));//Disabling angular animation on carousel as it causes isses with sliding
+		
+		//Disabling angular animation on carousel as it causes isses with sliding
+		$animate.enabled(false,angular.element(document.getElementsByClassName("latestCollectionCarousel")));
+		
 		$http({method: 'GET', url: 'static/json/latest.json'}).
 		success(function(data, status, headers, config) {
 			$scope.latestCollection = data;
@@ -55,11 +58,12 @@ myStoreControllersModule.controller('productDetailCtrl', ['$scope','$http','$rou
 			$scope.activeProduct =  $rootScope.activeProduct;//Store active product model object from Root Scope
 			$scope.activeThumbnail = $scope.activeProduct.imageUrl;
 		}
-		else{//If active product not set then fetch products list from Products Service and 
+		else{//If active product not set then fetch products list from Products Service 
 			Products.getProductsList().success(function(data, status, headers, config) {
 				for(var i in data){
+				//Set active product after matching productId from URL using $routeParams
 					if($routeParams.productID === data[i].productId){
-						$scope.activeProduct = data[i];//Set active product after matching productId from URL
+						$scope.activeProduct = data[i];
 						$scope.activeThumbnail = $scope.activeProduct.imageUrl;
 					}
 				}
@@ -71,7 +75,6 @@ myStoreControllersModule.controller('productDetailCtrl', ['$scope','$http','$rou
 		$scope.setActiveSize = function(size){
 			$scope.activeSize = size;
 		}
-		
 		$scope.setActiveColor = function(color){
 			$scope.activeColor = color;
 		}

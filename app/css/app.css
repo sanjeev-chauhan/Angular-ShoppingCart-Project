@@ -3,7 +3,6 @@ html, body {
 	width:100%;
 	font-family: helvetica,arial,sans-serif;
 	font-size: 13px;
-    /*line-height: 1.4;*/
 }
 
 body{
@@ -43,9 +42,18 @@ input[type="text"]:focus{
 
 input[type="checkbox"]{margin-right:5px;}
 
+hr{border-color:#DDD;margin:20px 3%;}
+hr.fancyline {
+	border: 0;
+	height: 1px;
+	background: -webkit-linear-gradient(left,rgba(0,0,0,0),rgba(0,0,0,0.2),rgba(0,0,0,0));
+	background: -moz-linear-gradient(left,rgba(0,0,0,0),rgba(0,0,0,0.2),rgba(0,0,0,0));
+	background: linear-gradient(left,rgba(0,0,0,0),rgba(0,0,0,0.2),rgba(0,0,0,0));
+}
 .hideComponent{
 	display:none;
 }
+.textCenter{text-align:center}
 .strikeThrough{text-decoration:line-through !important;color:#666 !important;}
 
 .button.copper{
@@ -75,6 +83,47 @@ input[type="checkbox"]{margin-right:5px;}
 .subHeader{font-size:15px;font-weight:700;}
 
 .inputLabel{font-size:12px;}
+
+
+/*Overriding Bootstrap Carousel styles*/
+.glyphicon-chevron-left:before, .glyphicon-chevron-right:before{content:"";}
+.carousel-control .glyphicon-chevron-left{
+	background-image: url(../img/icons/arrow-white-left.png);
+	height: 46px;
+	width: 46px;
+	background-size: contain;
+}
+.carousel-control .glyphicon-chevron-right{
+	background-image: url(../img/icons/arrow-white-right.png);
+	height: 46px;
+	width: 46px;
+	background-size: contain;
+}
+.carousel-indicators li{width:13px;height:13px;margin: 2px 0;display:block;}
+.carousel-indicators .active{background-color: #8AA520;margin:2px 0;width:13px;height:13px;}
+.carousel-indicators{
+	top: 7%;
+	height: 30%;
+	right: 0%;
+	width: 30px;
+	left: inherit;
+}
+
+#scrollTopControl{
+	position: fixed;
+	bottom: 50px; 
+	right: 5px; 
+	cursor: pointer;
+	width:56px;
+	height:56px;
+	
+	background:url(../img/icons/scrolltop.png) no-repeat;
+	background-size:contain;
+	-webkit-transition: all 0.3s ease-out;
+	-o-transition: all 0.3s ease-out;
+	transition: all 0.3s ease-out;
+}
+#scrollTopControl:hover{background-image:url(../img/icons/scrolltop-hover.png);}
 
 .bannerStripe{
 	background:url(../img/gray-pattern.png) repeat;
@@ -246,6 +295,7 @@ a.logo{
 	width:100%;
 	height:450px !important;
 }
+.carouselSideText{color: #F7AD2A;font-size: 36px;margin-top:200px;}
 
 .productsListContainer{padding: 0px 20px;border-left: 1px solid #ccc;}
 
@@ -283,7 +333,7 @@ ul.filterSection {border-top: 1px solid #BBBBBB;}
 
 .productDetailOuterContainer{text-align:center;}
 
-.productHeader{color: #444;text-align:center;}
+.productHeader{color: #444;text-align:center;font-size: 22px;}
 /*.productDetailOuterContainer{text-align:center;}*/
 .productImagesContainer{
 	width:400px;
@@ -317,13 +367,36 @@ ul.filterSection {border-top: 1px solid #BBBBBB;}
 	font-weight: bold;
 	margin-top: 20px;
 }
-.productDicount{font-size: 17px;margin-top:15px;}
+.productDicount{font-size: 16px;margin-top:15px;}
 .productDicount span.discountPerct{font-size: 18px;color: #FC5019}
 .productDicount span.ValidTillDate{font-size: 14px;margin-left:20px}
-.discountedPrice span{font-size: 17px; color:#C55E3D;}
+.discountedPrice >span{
+	font-size: 15px; 
+	color:#C55E3D;
+	display: inline-block;
+	vertical-align: middle;
+}
+.discountedTag{background: url(../img/icons/tag.png) transparent;
+	background-size: 100%;
+	background-repeat: no-repeat;
+	width: 160px;
+	height: 90px;
+	display: inline-block;
+	position:relative;
+	vertical-align: middle;
+}
+
+.discountedTag span.price{
+	position: absolute;
+	top: 30px;
+	left: 10px;
+	font-size: 18px;
+	color: #DDD045;
+	transform: rotate(-6deg);
+}
 
 .availableSizes, .availableColors{margin-top:20px;}
-.productInfoLabel{font-size: 17px;vertical-align: middle;margin-right: 10px;}
+.productInfoLabel{font-size: 16px;vertical-align: middle;margin-right: 10px;}
 
 
 span.sizeBox {
@@ -359,7 +432,7 @@ span.colorBox.active {border:3px solid #E9B225}
 .purchaseButtonContainer{margin-top:50px;}
 
 .deliveryInfoOptions {margin-top:20px;font-size: 12px;}
-.deliveryInfoOptions span {margin-right:10px;}
+.deliveryInfoOptions span {margin-right:5px;}
 .deliveryInfoOptions span:before{
 	content:"";
 	width: 27px;
@@ -370,6 +443,7 @@ span.colorBox.active {border:3px solid #E9B225}
 	vertical-align: middle;
 	margin-right: 3px;
 }
+
 
 .checkoutButton:after{
 	content: "";
@@ -383,27 +457,5 @@ span.colorBox.active {border:3px solid #E9B225}
 	position: absolute;
 	top: 9px;
 }
-/*Overriding Bootstrap Carousel styles*/
-.glyphicon-chevron-left:before, .glyphicon-chevron-right:before{content:"";}
-.carousel-control .glyphicon-chevron-left{
-	background-image: url(../img/icons/arrow-white-left.png);
-	height: 46px;
-	width: 46px;
-	background-size: contain;
-}
-.carousel-control .glyphicon-chevron-right{
-	background-image: url(../img/icons/arrow-white-right.png);
-	height: 46px;
-	width: 46px;
-	background-size: contain;
-}
-.carousel-indicators li{width:12px;height:12px;margin: 2px 0;display:block;}
-.carousel-indicators .active{background-color: #8AA520;margin:2px 0;}
+.productDetails{text-align:left;}
 
-.carousel-indicators{
-	top: 7%;
-	height: 30%;
-	right: 0%;
-	width: 40px;
-	left: inherit;
-}

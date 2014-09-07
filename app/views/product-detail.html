@@ -20,7 +20,10 @@
 						<span class="ValidTillDate">(Applicable till 15th Sep) </span>
 					</div>
 					<div class="productDicount" ng-show="activeProduct.discount =='0%'">Sorry no discount on this product</div>
-					<div class="productValue discountedPrice">Rs.  {{activeProduct.discountedPrice| number}} <span>(Checkout Price)</span></div> 
+					<div class="productValue discountedPrice">
+						<div class="discountedTag"><span class="price">Rs. {{activeProduct.discountedPrice| number}}<span></div> 
+						<span>(Checkout Price)</span>
+					</div> 
 					<div class="availableSizes"> 
 						<span class="productInfoLabel">Choose size: </span>
 						<span ng-repeat="size in activeProduct.sizeAvailable" ng-class="{active:activeSize == size}" class="sizeBox" ng-click="setActiveSize(size)"> {{size }}</span>
@@ -30,15 +33,31 @@
 						<span ng-repeat="color in activeProduct.colorsAvailable" ng-class="{active:activeColor == color}" class="colorBox" ng-style="{'background':{{color}}}" ng-click="setActiveColor(color)"> </span>
 					</div>
 					<div class="purchaseButtonContainer"><button type="button" class="button copper checkoutButton">Checkout Now</a></div>
-					
 					<div class="deliveryInfoOptions">
-						
-							<span>30 day Exchange Policy</span>
-							<span>Cash on Delivery</span> 						
-							<span> Free Delivery in NCR*</span>
-					
+						<span>30 day Exchange Policy</span>
+						<span>Cash on Delivery</span> 						
+						<span> Free Delivery in NCR*</span>
+					</div>
+			</div>
+			<hr class="fancyline"/>
+			<div class="productDetails">
+				<div class="row">
+					<div class="col-sm-7">
+						<div><h4 class="subHeader">Product Detail </h4>
+						{{activeProduct.productDetail}}</div>
+						<div><h4 class="subHeader">Product Fit </h4>
+						{{activeProduct.fit}}</div>
+					</div>
+					<div class="col-sm-4">
+					<div class="deliveryInfoOptions">
+						<span>30 day Exchange Policy</span>
+						<span>Cash on Delivery</span> 						
+						<span> Free Delivery in NCR*</span>
+					</div>
 					</div>
 				</div>
+		
+			<div>
 		</div>
 	</div>
 </div>
