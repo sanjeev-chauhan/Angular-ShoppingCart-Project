@@ -1,5 +1,5 @@
-Angular-ShoppingCart-Project - A shopping cart app created using Angular framework
-================================================================================
+Angular-ShoppingCart - A shopping cart app built using Angular framework
+========================================================================
 
 This application is an Shopping portal created using angular framework.
 
