@@ -28,7 +28,8 @@
 		"category":"Tshirts",
         "productId": "Kook-tshirt-1251", 
         "imageUrl": "img/products-list/Kook-N-Keech-Marvel-Men-Blue---Yellow-X-Men-Print-T-shirt_377f52d9d7436f8c314c1c93a7482d1c_images_mini.jpg", 
-        "name": "Kook N Keech Marvel Print T-shirt"
+        "imagesCollection": ["img/products-list/Kook-N-Keech-Marvel-Men-Blue---Yellow-X-Men-Print-T-shirt_377f52d9d7436f8c314c1c93a7482d1c_images_mini.jpg", "img/products-list/Kook-N-Keech-Marvel-Men-Blue---Yellow-X-Men-Print-T-shirt_e673eb1606b4dad623e802e619e75d0f_images_mini.jpg"],
+		"name": "Kook N Keech Marvel Print T-shirt"
     }, 
      {
         "brand": "Breakbounce",
@@ -43,7 +44,8 @@
 		"category":"Trousers",
         "productId": "Breakbounce-trouser-1284", 
         "imageUrl": "img/products-list/Breakbounce-Men-Coral-Suave-Slim-Fit-Chino-Trousers_78a4c18163c7828ff98672895a75617d_images_mini.jpg", 
-        "name": "Breakbounce-Men-Coral Chino-Trousers"
+        "imagesCollection": ["img/products-list/Breakbounce-Men-Coral-Suave-Slim-Fit-Chino-Trousers_78a4c18163c7828ff98672895a75617d_images_mini.jpg", "img/products-list/Breakbounce-Men-Coral-Suave-Slim-Fit-Chino-Trousers_ade81ccd04f8b71f3a379fa9e136c89e_images_mini.jpg"],
+		"name": "Breakbounce-Men-Coral Chino-Trousers"
     }, 
 	 {
         "brand": "White Kalia",
@@ -58,6 +60,7 @@
 		"category":"Trousers",
         "productId": "White-Kalia-trouser-12754", 
         "imageUrl": "img/products-list/White-Kalia-Men-Trousers_39eed59499527b23f3fc8228d139ef03_images_mini.jpg", 
+		"imagesCollection": ["img/products-list/White-Kalia-Men-Trousers_39eed59499527b23f3fc8228d139ef03_images_mini.jpg", "img/products-list/White-Kalia-Men-Trousers_b67fd478c6230f101036ce760ad7706c_images_mini.jpg"],
         "name": "White Kalia Men Brown Trousers"
     },
 		 {
@@ -74,6 +77,7 @@
 		"category":"Jeans",
         "productId": "Ed Hardy-jeans-12754", 
         "imageUrl": "img/products-list/Ed-Hardy-Men-Blue-Slim-Fit-Jeans_be4e58a86e1aa27b2191d62eed973594_images_mini.jpg", 
+		"imagesCollection": ["img/products-list/Ed-Hardy-Men-Blue-Slim-Fit-Jeans_be4e58a86e1aa27b2191d62eed973594_images_mini.jpg", "img/products-list/Ed-Hardy-Men-Blue-Slim-Fit-Jeans_2fa631d138186c023048537a8670cfdc_images_mini.jpg"],
         "name": "Ed Hardy Men Blue Jeans"
     },
 	{
@@ -90,6 +94,7 @@
 		"category":"Shoes",
         "productId": "Nike-shoes-12254", 
         "imageUrl": "img/products-list/Nike-Men-Pink-Mercurial-Vortex-II-FG-Sports-Shoes_48d200f73fafaf82164d9c2752962316_images_mini.jpg", 
+		"imagesCollection": ["img/products-list/Nike-Men-Pink-Mercurial-Vortex-II-FG-Sports-Shoes_48d200f73fafaf82164d9c2752962316_images_mini.jpg", "img/products-list/Nike-Men-Pink-Mercurial-Vortex-II-FG-Sports-Shoes_e6119b3d5c7cffcb7707675d66222550_images_mini.jpg"],
         "name": "Nike Men-Pink Mercurial Shoes"
     },
     {
@@ -106,6 +111,7 @@
 		"category":"Shoes",
         "productId": "Puma-shoes-122454", 
         "imageUrl": "img/products-list/Puma-Men-Casual-Shoes_3eeb1624fc0a4be2af7e8701c8733d76_images_mini.jpg", 
+		"imagesCollection": ["img/products-list/Puma-Men-Casual-Shoes_3eeb1624fc0a4be2af7e8701c8733d76_images_mini.jpg", "img/products-list/Puma-Men-Casual-Shoes_fa3815e52209cbd88740f672758151da_images_mini.jpg"],
         "name": "Puma Men Black Driving Casual Shoes"
     },
 	   {
@@ -122,7 +128,8 @@
 		"category":"Shirts",
         "productId": "Indian-Terrain-Shirt-62454", 
         "imageUrl": "img/products-list/Indian-Terrain-Men-Blue---Khaki-Checked-Slim-Fit-Casual-Shirt_c13606dc9ce6f3249cb77ffb0994f097_images_mini.jpg", 
-        "name": "Indian Terrain Men's Khaki Casual Shirt"
+        "imagesCollection": ["img/products-list/Indian-Terrain-Men-Blue---Khaki-Checked-Slim-Fit-Casual-Shirt_c13606dc9ce6f3249cb77ffb0994f097_images_mini.jpg", "img/products-list/Indian-Terrain-Men-Blue---Khaki-Checked-Slim-Fit-Casual-Shirt_3bdcca026c6301aa0bac941aa0ef125a_images_mini.jpg"],
+		"name": "Indian Terrain Men's Khaki Casual Shirt"
     },
 	   {
         "brand": "Indian Terrain",
