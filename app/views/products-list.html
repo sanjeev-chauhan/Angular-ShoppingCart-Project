@@ -26,7 +26,7 @@
 			<div class="productsListContainer">
 				<h4 class="subHeader">Number of products - {{filteredList.length}} items</h4>
 				<ul class="productsList">
-					<li ng-repeat="product in filteredList = (productsList | productFilter:gender:'gender' | productFilter:category:'category'  | productFilter:brand:'brand')">
+					<li ng-repeat="product in filteredList = (productsList |filter:searchType:strict | productFilter:gender:'gender' | productFilter:category:'category'  | productFilter:brand:'brand')">
 						<a href="#/product/detail/{{product.productId}}"><img ng-src="{{product.imageUrl}}" ng-click="setActiveProduct(product)" class="productMainImage"></a>
 						<div class="productBrandName">{{product.brand }}</div>
 						<div class="productName">{{product.name }}</div>

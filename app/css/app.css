@@ -1,9 +1,10 @@
 html, body {
-    height: 100%;
+    min-height: 100%;
 	width:100%;
 	font-family: helvetica,arial,sans-serif;
 	font-size: 13px;
 }
+html{position:relative;}
 
 body{
 	background:url(../img/whitepaper-pattern.jpg) repeat ;
@@ -79,12 +80,20 @@ hr.fancyline {
 	box-shadow:0 100px 0 0 #c14800 inset;
 	transition-duration:1s;
 }
+.mainHeader{margin:30px 0;}
 		
 .subHeader{font-size:15px;font-weight:700;}
 
 .inputLabel{font-size:12px;}
 
+.pageWrapper{padding-bottom: 100px;}
 
+footer{
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	right: 0;
+}
 /*Overriding Bootstrap  Styles*/
 .glyphicon-chevron-left:before, .glyphicon-chevron-right:before{content:"";}
 .carousel-control .glyphicon-chevron-left{
@@ -119,7 +128,7 @@ hr.fancyline {
 	cursor: pointer;
 	width:56px;
 	height:56px;
-	
+	z-index: 1;
 	background:url(../img/icons/scrolltop.png) no-repeat;
 	background-size:contain;
 	-webkit-transition: all 0.3s ease-out;
@@ -301,7 +310,7 @@ font-size: 13px;
 line-height: 19px;
 padding-top: 20px;
 padding-bottom: 10px;
-margin-top: 20px;
+
 }
 .footerRow{width:60%;margin:0 auto;}
 .largerText{font-size: 20px;margin: 0 10%;line-height: 26px;}
@@ -320,8 +329,8 @@ margin-top: 20px;
 	height:450px !important;
 }
 .carouselSideText{color: #F7AD2A;font-size: 36px;margin:50px 0 0 25%;}
-.CarouselSideImage{max-width: 100%;height: auto;margin-top: 55px;}
-.fullWidthImage{max-width: 100%;height: auto;margin: 30px 0;}
+.CarouselSideImage{max-width: 100%;height: auto;margin-top: 85px;}
+.fullWidthImage{max-width: 100%;height: auto;margin: 0px 0 20px 0;}
 
 
 /* Products Result page styles */

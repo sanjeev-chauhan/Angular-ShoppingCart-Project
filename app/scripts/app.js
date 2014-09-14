@@ -29,4 +29,4 @@ myStoreApp.config(['$routeProvider',
 	   otherwise({
         redirectTo: 'home'
       });
-  }]);
+}]);
