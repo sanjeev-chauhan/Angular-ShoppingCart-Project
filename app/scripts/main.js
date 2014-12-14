@@ -13,7 +13,7 @@ var myStore = (function(ang,windowElem) {
 		scrollWindowToTop:function(){
 			windowElem.scrollTo(windowElem.pageXOffset,0);
 		}
-	}   
+	};
 }(angular,this));
 
 //Binding events on document content load

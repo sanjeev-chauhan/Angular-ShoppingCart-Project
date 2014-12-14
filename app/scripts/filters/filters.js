@@ -20,7 +20,7 @@ myStoreFiltersModule.filter('productFilter', function() {
 				if (bindingObj[value[self.objPropToMatch]] === true) {
 					filteredList.push(value);
 				}
-			}, self)
+			}, self);
 		}
 		else{
 			filteredList = productsList;

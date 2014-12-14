@@ -13,7 +13,7 @@ myStoreControllersModule.controller('productsListCtrl', ['$scope', '$http','$roo
 		//Function to set checkbox model property true or false in its parent obj when it is checked/unchecked, used for filtering
 		$scope.setFilterBindingProp = function(event,itemObject){
 			$scope[itemObject.dataBindingKey][itemObject.value] = event.target.checked;
-		}
+		};
 		
 		$scope.filterCategories = [{dataBindingKey:"category", value:"Shirts"} , {dataBindingKey:"category", value:"Tshirts"} , 
 			{dataBindingKey:"category", value:"Trousers"} ,{dataBindingKey:"category", value:"Jeans"} , {dataBindingKey:"category", value:"Shoes"}];
@@ -24,6 +24,6 @@ myStoreControllersModule.controller('productsListCtrl', ['$scope', '$http','$roo
 		//Set active product in rootScope, to be used for showing product details
 		$scope.setActiveProduct = function(productObj) {
 			$rootScope.activeProduct = productObj;
-		}
+		};
 	}
 ]);

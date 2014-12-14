@@ -20,12 +20,12 @@ myStoreControllersModule.controller('productDetailCtrl', ['$scope','$http','$rou
 		}
 		$scope.setActiveImage = function(imageUrl){
 			$scope.activeThumbnail = imageUrl;
-		}
+		};
 		$scope.setActiveSize = function(size){
 			$scope.activeSize = size;
-		}
+		};
 		$scope.setActiveColor = function(color){
 			$scope.activeColor = color;
-		}
+		};
 	}
 ]);

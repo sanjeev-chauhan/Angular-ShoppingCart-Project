@@ -12,6 +12,6 @@ myStoreControllersModule.controller('homePageCtrl', ['$scope', '$http','$animate
 		$http({method: 'GET', url: 'static/json/latest.json'}).
 		success(function(data, status, headers, config) {
 			$scope.latestCollection = data;
-		})
+		});
 	}
 ]);
