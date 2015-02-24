@@ -1,0 +1,207 @@
+
+
+csslint: There are 41 problems in C:\Users\scha18\Documents\GitHub\Angular-ShoppingCart-Project\app\css\app.css.
+
+app.css
+1: warning at line 16, col 2
+The property -moz-transition is compatible with -webkit-transition and -o-transition and should be included as well.
+	-webkit-transition: all 0.3s ease-out;
+
+app.css
+2: warning at line 28, col 1
+Outlines should only be modified using :focus.
+input[type="text"]{
+
+app.css
+3: warning at line 31, col 2
+The box-sizing property isn't supported in IE6 and IE7.
+	box-sizing: border-box;
+
+app.css
+4: warning at line 47, col 1
+Element (hr.fancyline) is overqualified, just use .fancyline without element name.
+hr.fancyline {
+
+app.css
+5: warning at line 47, col 1
+Missing vendor-prefixed CSS gradients for Old Webkit (Safari 4+, Chrome), Opera 11.1+.
+hr.fancyline {
+
+app.css
+6: warning at line 58, col 56
+Use of !important
+.strikeThrough{text-decoration:line-through !important;color:#666 !important;}
+
+app.css
+7: warning at line 58, col 16
+Use of !important
+.strikeThrough{text-decoration:line-through !important;color:#666 !important;}
+
+app.css
+8: warning at line 60, col 1
+Don't use adjoining classes.
+.button.copper{
+
+app.css
+9: warning at line 79, col 1
+Don't use adjoining classes.
+.button.copper:hover{
+
+app.css
+10: warning at line 79, col 1
+Don't use adjoining classes.
+.button.copper:hover{
+
+app.css
+11: warning at line 116, col 9
+Values of 0 shouldn't have units specified.
+	right: 0%;
+
+app.css
+12: warning at line 124, col 1
+Don't use IDs in selectors.
+#scrollTopControl{
+
+app.css
+13: warning at line 134, col 2
+The property -moz-transition is compatible with -webkit-transition and -o-transition and should be included as well.
+	-webkit-transition: all 0.3s ease-out;
+
+app.css
+14: warning at line 138, col 1
+Don't use IDs in selectors.
+#scrollTopControl:hover{background-image:url(../img/icons/scrolltop-hover.png);}
+
+app.css
+15: warning at line 148, col 2
+The property -moz-transition is compatible with -webkit-transition and -o-transition and should be included as well.
+	-webkit-transition: all 0.3s ease-out;
+
+app.css
+16: warning at line 208, col 2
+The box-sizing property isn't supported in IE6 and IE7.
+	box-sizing: border-box;
+
+app.css
+17: warning at line 215, col 1
+Don't use adjoining classes.
+.quickSearch.active{
+
+app.css
+18: warning at line 219, col 2
+Using width with padding can sometimes make elements larger than you expect.
+	padding: 0 10px;
+
+app.css
+19: warning at line 243, col 1
+Don't use adjoining classes.
+.quickSearch.active .icon-search , .quickSearch.active .searchBox, .quickSearch.active .close-search{
+
+app.css
+20: warning at line 243, col 36
+Don't use adjoining classes.
+.quickSearch.active .icon-search , .quickSearch.active .searchBox, .quickSearch.active .close-search{
+
+app.css
+21: warning at line 243, col 68
+Don't use adjoining classes.
+.quickSearch.active .icon-search , .quickSearch.active .searchBox, .quickSearch.active .close-search{
+
+app.css
+22: warning at line 244, col 2
+Expected (inline | block | list-item | inline-block | table | inline-table | table-row-group | table-header-group | table-footer-group | table-row | table-column-group | table-column | table-cell | table-caption | grid | inline-grid | none | inherit | -moz-box | -moz-inline-block | -moz-inline-box | -moz-inline-grid | -moz-inline-stack | -moz-inline-table | -moz-grid | -moz-grid-group | -moz-grid-line | -moz-groupbox | -moz-deck | -moz-popup | -moz-stack | -moz-marker | -webkit-box | -webkit-inline-box | -ms-flexbox | -ms-inline-flexbox | flex | -webkit-flex | inline-flex | -webkit-inline-flex) but found 'initial'.
+	display: initial;
+
+app.css
+23: warning at line 329, col 2
+Use of !important
+	height:450px !important;
+
+app.css
+24: warning at line 333, col 54
+Values of 0 shouldn't have units specified.
+.fullWidthImage{max-width: 100%;height: auto;margin: 0px 0 20px 0;}
+
+app.css
+25: warning at line 337, col 33
+Values of 0 shouldn't have units specified.
+.productsListContainer{padding: 0px 20px;border-left: 1px solid #ccc;}
+
+app.css
+26: warning at line 345, col 2
+Using width with border can sometimes make elements larger than you expect.
+	border:1px solid #EBE9E9;
+
+app.css
+27: warning at line 352, col 17
+Element (img.productMainImage) is overqualified, just use .productMainImage without element name.
+ul.productsList img.productMainImage{
+
+app.css
+28: warning at line 367, col 27
+Values of 0 shouldn't have units specified.
+.filterContainer{padding: 0px 30px;}
+
+app.css
+29: warning at line 369, col 1
+Element (ul.filterSection) is overqualified, just use .filterSection without element name.
+ul.filterSection {border-top: 1px solid #BBBBBB;}
+
+app.css
+30: warning at line 377, col 2
+Using width with padding can sometimes make elements larger than you expect.
+	padding: 20px 0 10px 0;
+
+app.css
+31: warning at line 378, col 2
+Using width with border can sometimes make elements larger than you expect.
+	border: 1px dotted #ccc;
+
+app.css
+32: warning at line 390, col 2
+Using width with border can sometimes make elements larger than you expect.
+	border:1px solid transparent;
+
+app.css
+33: warning at line 405, col 17
+Element (span.discountPerct) is overqualified, just use .discountPerct without element name.
+.productDicount span.discountPerct{font-size: 18px;color: #FC5019}
+
+app.css
+34: warning at line 406, col 17
+Element (span.ValidTillDate) is overqualified, just use .ValidTillDate without element name.
+.productDicount span.ValidTillDate{font-size: 14px;margin-left:20px}
+
+app.css
+35: warning at line 423, col 16
+Element (span.price) is overqualified, just use .price without element name.
+.discountedTag span.price{
+
+app.css
+36: warning at line 438, col 2
+Using height with border can sometimes make elements larger than you expect.
+	border: 1px solid #ccc;
+
+app.css
+37: warning at line 438, col 2
+Using width with border can sometimes make elements larger than you expect.
+	border: 1px solid #ccc;
+
+app.css
+38: warning at line 445, col 2
+Using height with padding-top can sometimes make elements larger than you expect.
+	padding-top: 7px;
+
+app.css
+39: warning at line 452, col 1
+Don't use adjoining classes.
+span.sizeBox.active {background:#d86316;}
+
+app.css
+40: warning at line 463, col 1
+Don't use adjoining classes.
+span.colorBox.active {border:3px solid #E9B225}
+
+app.css
+41: warning
+Too many font-size declarations (21), abstraction needed.
